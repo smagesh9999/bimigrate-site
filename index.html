@@ -31,6 +31,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#product">Product</a></li>
+        <li><a href="#sample">Sample</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="/terms.html">Terms</a></li>
@@ -117,6 +118,51 @@
       </p>
     </section>
 
+    <section class="section" id="sample">
+      <div class="section-head">
+        <h2>Request the free sample pack</h2>
+        <p>See exactly what you receive before paying. No card, sales call, or workbook upload required.</p>
+      </div>
+      <div class="sample-band">
+        <div class="sample-copy">
+          <ol class="sample-includes">
+            <li>Assessment PDF (complexity + inventory)</li>
+            <li>Gap matrix (exact / approx / unsupported)</li>
+            <li>Semantic model starter + DAX drafts</li>
+            <li>Migration checklist</li>
+          </ol>
+          <p class="sample-note">Demo workbook only. Your paid pack is generated from the file you upload.</p>
+        </div>
+        <form class="sample-form" id="sample-request-form">
+          <div class="form-row">
+            <label for="sample-email">Work email</label>
+            <input id="sample-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="sample-name">Name <span>(optional)</span></label>
+              <input id="sample-name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="100" />
+            </div>
+            <div class="form-row">
+              <label for="sample-company">Company <span>(optional)</span></label>
+              <input id="sample-company" name="company" type="text" autocomplete="organization" placeholder="Company name" maxlength="120" />
+            </div>
+          </div>
+          <div class="form-row form-honeypot" aria-hidden="true">
+            <label for="sample-website">Website</label>
+            <input id="sample-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <button class="btn btn-primary" id="sample-submit" type="submit">Get the sample pack</button>
+          <p class="form-trust">Instant access. We’ll only use your email for this request and one helpful follow-up. No spam.</p>
+          <p class="form-status" id="sample-status" role="status" aria-live="polite"></p>
+          <div class="sample-unlocked" id="sample-unlocked" hidden>
+            <a class="btn btn-primary" id="sample-zip" href="#" download>Download sample ZIP</a>
+            <a class="btn btn-ghost" id="sample-pdf" href="#" target="_blank" rel="noopener">Preview assessment PDF</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section class="section" id="how">
       <div class="section-head">
         <h2>How it works</h2>
@@ -179,5 +225,6 @@
     </footer>
   </div>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="/sample-request.js" defer></script>
 </body>
 </html>
