@@ -64,12 +64,22 @@ a { color: inherit; }
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.55rem;
   letter-spacing: -0.03em;
   text-decoration: none;
   color: var(--ink);
+}
+
+.logo-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
 }
 
 .logo span {
